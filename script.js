@@ -83,7 +83,7 @@ function addHelpButton() {
       // Create buttons and show them
       const offsetY = 60; // Same vertical distance for both buttons
       joinUsButton = createHelpOptionButton('JOIN US', helpButton, -110, offsetY, 'https://t.me/techspiresolution');
-      contactUsButton = createHelpOptionButton('CONTACT US', helpButton, 10, offsetY, 'https://t.me/VinayVermaX');
+      contactUsButton = createHelpOptionButton('CONTACT US', helpButton, 10, offsetY, 'https://t.me/Chingchukha');
 
       document.body.appendChild(joinUsButton);
       document.body.appendChild(contactUsButton);
@@ -1305,8 +1305,8 @@ function displayPlanOptions() {
 
   // Create the radio buttons
   const plans = [
-    { label: 'Monthly Plan (₹4,999)', value: '₹4,999' },
-    { label: 'Yearly Plan (₹44999)', value: '₹44999' },
+    { label: 'Monthly Plan (199$)', value: '199$' },
+    { label: 'Yearly Plan (1999$)', value: ' 1999$' },
   ];
 
   plans.forEach((plan) => {
@@ -1452,16 +1452,16 @@ function displayQrPage() {
     container.style.textAlign = 'center';
     document.body.appendChild(container);
   
-    // Input box for UTR/Transaction ID
+    // Input box for TX HASH/Transaction ID
     const label = document.createElement('h2');
-    label.textContent = 'Enter 12 Digit UTR or Transaction ID';
+    label.textContent = 'Enter Hash TX ID';
     label.style.color = '#00ff00';
     label.style.marginBottom = '20px';
     container.appendChild(label);
   
     const inputBox = document.createElement('input');
     inputBox.type = 'text';
-    inputBox.placeholder = 'Enter UTR/Transaction ID';
+    inputBox.placeholder = 'Paste TX ID';
     inputBox.style.padding = '10px';
     inputBox.style.marginBottom = '20px';
     inputBox.style.border = '1px solid #00ff00';
@@ -1496,7 +1496,7 @@ function displayQrPage() {
   // Function to validate the entered UTR/Transaction ID
   function validateTransactionId(enteredId, container, inputBox, validateButton) {
     if (!/^\d{12}$/.test(enteredId)) {
-      alert('Please enter a valid 12-digit UTR/Transaction ID.');
+      alert('Please enter a valid TX ID.');
       return;
     }
   
@@ -1526,7 +1526,7 @@ function displayQrPage() {
   
         container.appendChild(accessKeyButton);
       } else {
-        alert('Invalid UTR/Transaction ID. Please try again.');
+        alert('Invalid TXN ID. Please try again.');
         validateButton.textContent = 'Validate';
         validateButton.disabled = false;
       }
